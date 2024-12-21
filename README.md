@@ -38,11 +38,11 @@
 ### Étapes pour démarrer
 1. Clonez ce dépôt dans votre répertoire local :
    ```bash
-   git clone https://github.com/DimitriTedom/STSKeyCodeApp.git
+   git clone https://github.com/DimitriTedom/STS_KeyCode_App
    ```
 2. Accédez au dossier du projet :
    ```bash
-   cd STSKeyCodeApp
+   cd STS_KeyCode_App
    ```
 3. Ouvrez le fichier `index.html` dans un navigateur.
 
