@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --container-bg: linear-gradient(
+    to right,
+    #4b6cb7,
+    #182848
+  ); /* Dégradé principal */
+  --bg: rgba(255, 255, 255, 0.15);
+  --border-bg: rgba(255, 255, 255, 0.25);
+  --text-color: black;
+  --highlight-color: #ff8a65;
+  --container-hover-bg: rgba(255, 255, 255, 0.3);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+  /* background-image: url("https://images.unsplash.com/photo-1506508618093-6fe5ce3def4c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFzY2lpJTIwY29kZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D"); */
+ background-image: url("./STSKeyCodeApp.svg");
+  background-size: cover;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 10px;
+  padding: 5rem;
+}
+
+header {
+  display: flex;
+  top: 10%;
+  justify-content: center;
+  color: var(--highlight-color);
+  transition: transform 0.3s ease, background 0.3s ease-in-out;
+  animation: slideIn 0.8s ease-out backwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sts {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.key {
+  font-size: 1.5rem;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background: var(--bg);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid var(--border-bg);
+  transition: background 0.3s cubic-bezier(0.3, 0.6, 0.83, 0.67);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+input {
+    padding: .9rem;
+    border-radius: 1.2rem;
+    background-color: var(--highlight-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+
+    padding: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease-in-out;
+    animation: slideIn 0.8s ease-out backwards;
+    border: .2rem solid var(--border-bg);
+  }
+  .enter{
+    color: var(--highlight-color);
+    font-weight: bold;
+  }
+
+.container:hover {
+  background: var(--container-hover-bg);
+}
+
+.key-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 2rem;
+  color: var(--text-color);
+  margin: 1.5rem;
+  min-width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0rem 0.8rem 2.5rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid var(--border-bg);
+  transition: transform 0.3s ease, background 0.3s ease-in-out;
+  animation: slideIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+.key-container:hover {
+  background: var(--highlight-color);
+  color: white;
+  transform: translateY(-10px);
+}
+
+.key-container h1 {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--highlight-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.key-content {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.key-content:hover {
+  text-decoration: underline;
+}
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--highlight-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  animation: fadeOut 2s forwards;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
